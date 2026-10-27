@@ -1,0 +1,24 @@
+- date: "2025/11"
+  content: Attended ACM SIGSPATIAL 2025. Check out my <a href='https://www.linkedin.com/feed/update/urn:li:activity:7394945437130092544' target='_blank'>post!</a>
+
+- date: "2025/10"
+  content: "Our paper <a href='https://arxiv.org/pdf/2510.23124' target='_blank'>DEEPSALT: Bridging Laboratory and Satellite Spectra through Domain Adaptation and Knowledge Distillation for Large-Scale Soil Salinity Estimation</a> is accepted at IEEE Big Data 2025 (Acceptance Rate 18.7%). Check out my co-author's <a href='https://www.linkedin.com/feed/update/urn:li:activity:7387195079628619776/' target='_blank'>post!</a>"
+
+- date: "2025/08"
+  content: "Our paper <a href='https://arxiv.org/pdf/2508.09453' target='_blank'>HyperKD: Distilling Cross-Spectral Knowledge in Masked Autoencoders via Inverse Domain Shift with Spatial-Aware Masking and Specialized Loss </a> (We won the Best Paper Award!). Check out my co-author's <a href='https://www.linkedin.com/feed/update/urn:li:activity:7384649215127445504/' target='_blank'>post!</a>"
+
+- date: "2025/08"
+  content: "Our paper <a href='https://arxiv.org/pdf/2508.07020' target='_blank'>TerraMAE: Learning Spatial-Spectral Representations from Hyperspectral Earth Observation Data via Adaptive Masked Autoencoders </a> is accepted at ACM SIGSPATIAL 2025. Check out my <a href='https://www.linkedin.com/feed/update/urn:li:activity:7358898449288712193/' target='_blank'>post!</a>"
+
+- date: "2025/02"
+  content: Attended AAAI 2025. Check out my <a href='https://www.linkedin.com/feed/update/urn:li:activity:7301403515761897472/' target='_blank'>post!</a>
+
+- date: "2025/01"
+  content: "Started my PhD at CSU!"
+
+- date: "2024/10"
+  content: "Our paper <a href='https://ojs.aaai.org/index.php/AAAI/article/view/35253/37408' target='_blank'>Accounting for Spatial Variability with the Histogram of Oriented Gradients Based Masking Improves Performance of Masked Autoencoder over Hyperspectral Satellite Imagery </a> is accepted at AAAI 2025. Check out my <a href='https://www.linkedin.com/feed/update/urn:li:activity:7257496331017990144/' target='_blank'>post!</a>"
+
+
+- date: "2024/08"
+  content: "Defended my master's thesis titled [Towards Generating a Pre-Training Image Transformer Framework for Preserving Spatio-Spectral Properties in Hyperspectral Satellite Images](https://api.mountainscholar.org/server/api/core/bitstreams/5fe7d8a1-a687-429e-adad-f28b213fd90e/content)"

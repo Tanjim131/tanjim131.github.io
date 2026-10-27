@@ -401,7 +401,7 @@ external_links:
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: true # Keep enabled for responsive images
+  enabled: false # Keep enabled for responsive images
   widths:
     - 480
     - 800
@@ -433,7 +433,7 @@ enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: true # enables automatic tooltip links
 enable_darkmode: true # enables switching between light/dark modes
-enable_navbar_social: true # enables displaying social links in the navbar
+enable_navbar_social: false # enables displaying social links in the navbar
 enable_project_categories: true # enables categorization of projects
 enable_medium_zoom: true # enables image zoom feature
 enable_progressbar: true # enables a horizontal progress bar

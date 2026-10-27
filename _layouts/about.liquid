@@ -5,8 +5,7 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
+        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}
       {% else %}
         {{ site.title }}
       {% endif %}
@@ -22,14 +21,11 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true
           %}
         {% endif %}
         {% if page.profile.more_info %}
@@ -40,40 +36,86 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
+    <!-- ===== Shared styles for all fancy dividers ===== -->
+    <style>
+      .section-link {
+        text-decoration: none;
+        color: inherit;
+      }
+      .section-link:hover {
+        text-decoration: underline;
+      }
+      .divider-row {
+        display: flex;
+        align-items: center;
+        margin: 30px 0 10px;
+      }
+      .divider-row .heading {
+        font-size: 2.0em;
+        margin-right: 10px;
+        line-height: 1;
+      }
+      .divider-row .rule {
+        flex-grow: 1;
+        height: 1px;
+        background-color: #ccc;
+      }
+    </style>
+
+    <!-- ===== News (announcements collection) ===== -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <div class="divider-row">
+        <a href="{{ '/news/' | relative_url }}" class="section-link heading">News</a>
+        <div class="rule"></div>
+      </div>
       {% include news.liquid limit=true %}
     {% endif %}
 
-    <!-- Latest posts -->
+    <!-- ===== News (simple list variant) ===== -->
+    {% if page.simple_news %}
+      <div class="divider-row">
+        <a href="{{ '/news/' | relative_url }}" class="section-link heading">News</a>
+        <div class="rule"></div>
+      </div>
+      {% include simple_news.liquid limit=true %}
+    {% endif %}
+
+    <!-- ===== Latest Posts ===== -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
+      <div class="divider-row">
+        <a href="{{ '/blog/' | relative_url }}" class="section-link heading">Latest Posts</a>
+        <div class="rule"></div>
+      </div>
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Selected papers -->
+    <!-- ===== Selected Publications ===== -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
+      <div class="divider-row">
+        <a href="{{ '/publications/' | relative_url }}" class="section-link heading">Selected Publications</a>
+        <div class="rule"></div>
+      </div>
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
+    <!-- ===== Social ===== -->
     {% if page.social %}
+      <div class="divider-row">
+        <span class="heading">Connect</span>
+        <div class="rule"></div>
+      </div>
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
 
+    <!-- ===== Newsletter (optional) ===== -->
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      <div class="divider-row">
+        <span class="heading">Newsletter</span>
+        <div class="rule"></div>
+      </div>
       {% include newsletter.liquid center=true %}
     {% endif %}
   </article>
